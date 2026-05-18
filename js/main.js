@@ -1,6 +1,13 @@
 (function () {
   'use strict';
 
+  const SHOPIFY = {
+    store: 'https://j19jbw-rr.myshopify.com',
+    variantId: '44323647356979',
+    productUrl:
+      'https://j19jbw-rr.myshopify.com/products/snapball%E2%84%A2-instant-spiral-feedback',
+  };
+
   const PRODUCTS = {
     single: {
       id: 'snapball-single',
@@ -8,6 +15,7 @@
       variant: 'Single (1×)',
       price: 24.99,
       image: 'assets/snapball-device.svg',
+      shopifyUnits: 1,
     },
     coach: {
       id: 'snapball-coach',
@@ -15,6 +23,7 @@
       variant: 'Coaches Pack (4×)',
       price: 79.99,
       image: 'assets/snapball-device.svg',
+      shopifyUnits: 4,
     },
   };
 
@@ -51,14 +60,52 @@
     return product.price * qty;
   }
 
+  function getShopifyUnitsForLine(productId, lineQty) {
+    const product = PRODUCTS[productId === 'snapball-coach' ? 'coach' : 'single'];
+    return lineQty * product.shopifyUnits;
+  }
+
+  function getShopifyUnitsFromSelection() {
+    const product = getSelectedProduct();
+    const qty = parseInt($('#quantity').value, 10) || 1;
+    return qty * product.shopifyUnits;
+  }
+
+  function buildShopifyAddUrl(units, checkout) {
+    const params = new URLSearchParams({
+      id: SHOPIFY.variantId,
+      quantity: String(units),
+    });
+    if (checkout) {
+      params.set('return_to', '/checkout');
+    }
+    return `${SHOPIFY.store}/cart/add?${params.toString()}`;
+  }
+
+  function buildShopifyCartUrl(totalUnits) {
+    return `${SHOPIFY.store}/cart/${SHOPIFY.variantId}:${totalUnits}`;
+  }
+
+  function redirectToShopify(url) {
+    window.location.href = url;
+  }
+
+  function totalShopifyUnitsInCart() {
+    return cart.reduce(
+      (sum, item) => sum + getShopifyUnitsForLine(item.id, item.qty),
+      0
+    );
+  }
+
   function updateProductUI() {
     const product = getSelectedProduct();
     $('#productPrice').textContent = formatPrice(product.price);
     $('#addPrice').textContent = formatPrice(getLinePrice());
 
-    const note = selectedVariant === 'coach'
-      ? '4 units · Save $20 vs singles · Free shipping'
-      : 'Single unit · Free shipping over $50';
+    const note =
+      selectedVariant === 'coach'
+        ? 'Adds 4 units to Shopify cart · Create a bundle variant in Shopify for $79.99 pricing'
+        : 'Single unit · Secure checkout on Shopify';
     $('#priceNote').textContent = note;
   }
 
@@ -116,9 +163,7 @@
   function addToCart(openDrawer = true) {
     const product = getSelectedProduct();
     const qty = parseInt($('#quantity').value, 10) || 1;
-    const existing = cart.find(
-      (item) => item.id === product.id
-    );
+    const existing = cart.find((item) => item.id === product.id);
 
     if (existing) {
       existing.qty += qty;
@@ -204,29 +249,54 @@
     document.body.style.overflow = '';
   }
 
+  function initShopifyLinks() {
+    $$('[data-shopify="product"]').forEach((el) => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        redirectToShopify(SHOPIFY.productUrl);
+      });
+    });
+
+    $$('[data-shopify="add"]').forEach((el) => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        const units = getShopifyUnitsFromSelection();
+        redirectToShopify(buildShopifyAddUrl(units, false));
+      });
+    });
+  }
+
   function initCart() {
     $('#cartToggle').addEventListener('click', openCart);
     $('#cartClose').addEventListener('click', closeCart);
     $('#cartOverlay').addEventListener('click', closeCart);
 
     $('#addToCart').addEventListener('click', () => addToCart(true));
+
     $('#buyNow').addEventListener('click', () => {
-      addToCart(true);
+      const units = getShopifyUnitsFromSelection();
+      redirectToShopify(buildShopifyAddUrl(units, true));
     });
 
     $('#checkoutBtn').addEventListener('click', () => {
       if (cart.length === 0) return;
-      alert(
-        'Demo checkout — In production, connect Shopify or Stripe here.\n\nOrder total: ' +
-          formatPrice(cartSubtotal())
-      );
+      const units = totalShopifyUnitsInCart();
+      redirectToShopify(buildShopifyCartUrl(units));
     });
+
+    const aboutCta = $('#aboutShopCta');
+    if (aboutCta) {
+      aboutCta.addEventListener('click', () => {
+        redirectToShopify(buildShopifyAddUrl(1, false));
+      });
+    }
   }
 
   function init() {
     initVariants();
     initQuantity();
     initGallery();
+    initShopifyLinks();
     initCart();
     updateProductUI();
     updateCartUI();
