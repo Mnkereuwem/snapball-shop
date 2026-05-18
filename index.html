@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    (function () {
+      var base = document.createElement('base');
+      base.href = location.hostname.endsWith('github.io') ? '/snapball-shop/' : '/';
+      document.head.insertBefore(base, document.head.firstChild);
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SNAPBALL™ | Instant Spiral Feedback</title>
