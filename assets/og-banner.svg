@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0c"/>
+      <stop offset="50%" stop-color="#0d2818"/>
+      <stop offset="100%" stop-color="#0a0a0c"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFE566"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#bg)" opacity="0.5"/>
+  <pattern id="lines" width="120" height="120" patternUnits="userSpaceOnUse">
+    <rect width="120" height="120" fill="#1B5E20" opacity="0.15"/>
+    <line x1="0" y1="119" x2="120" y2="119" stroke="#2E7D32" stroke-width="1" opacity="0.3"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#lines)"/>
+  <text x="80" y="120" font-family="Arial Black, sans-serif" font-size="28" fill="#F44336" letter-spacing="4">Ï LIVE</text>
+  <text x="80" y="200" font-family="Arial Black, sans-serif" font-size="72" fill="url(#gold)" letter-spacing="2">SNAPBALL"</text>
+  <text x="80" y="270" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#fff" letter-spacing="6">INSTANT SPIRAL FEEDBACK</text>
+  <text x="80" y="340" font-family="system-ui, sans-serif" font-size="22" fill="#888">Perfect spiral stays locked · Wobble detaches instantly</text>
+  <g transform="translate(900, 315)" filter="url(#glow)">
+    <circle r="80" fill="#FFD700"/>
+    <circle r="70" fill="#1a1a1a"/>
+    <text y="12" text-anchor="middle" font-family="Arial Black" font-size="48" fill="#FFD700">S</text>
+    <path d="M0 -55 L15 -25 L0 -35 L-15 -25 Z" fill="#FFD700"/>
+    <path d="M55 0 L25 15 L35 0 L25 -15 Z" fill="#FFD700" opacity="0.8"/>
+    <path d="M0 55 L-15 25 L0 35 L15 25 Z" fill="#FFD700" opacity="0.8"/>
+    <path d="M-55 0 L-25 -15 L-35 0 L-25 15 Z" fill="#FFD700" opacity="0.8"/>
+  </g>
+  <rect x="80" y="480" width="200" height="50" rx="6" fill="#FFD700"/>
+  <text x="180" y="513" text-anchor="middle" font-family="system-ui" font-size="18" font-weight="800" fill="#0a0a0c">FROM $24.99</text>
+</svg>

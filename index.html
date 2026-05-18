@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNAPBALL™ | Instant Spiral Feedback</title>
+  <meta name="description" content="SNAPBALL™ — The yellow spiral trainer that stays attached on perfect throws and detaches instantly on wobble. Built for quarterbacks.">
+  <meta property="og:title" content="SNAPBALL™ | Instant Spiral Feedback">
+  <meta property="og:description" content="Train your spiral outdoors. Stays attached on perfect throws. Detaches on wobble. From $24.99.">
+  <meta property="og:image" content="assets/og-banner.svg">
+  <link rel="icon" href="assets/snapball-logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Announcement bar -->
+  <div class="announcement-bar">
+    <span class="live-dot"></span>
+    <span>FIELD-TESTED SPIRAL FEEDBACK — FREE SHIPPING ON COACHES PACK</span>
+    <span class="announcement-tag">QB SEASON</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <img src="assets/snapball-logo.svg" alt="Snapball" width="40" height="40">
+        <span>SNAPBALL<small>™</small></span>
+      </a>
+      <nav class="main-nav">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#product">Shop</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-toggle" id="cartToggle" aria-label="Open cart">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/>
+            <path d="M6 6L5 3H2"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="assets/field-pattern.svg" alt="" class="field-texture" aria-hidden="true">
+      <div class="hero-glow hero-glow--left"></div>
+      <div class="hero-glow hero-glow--right"></div>
+    </div>
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="live-dot"></span> INSTANT SPIRAL FEEDBACK
+        </div>
+        <h1>
+          <span class="hero-line">THROW IT.</span>
+          <span class="hero-line hero-line--accent">READ IT.</span>
+          <span class="hero-line hero-line--dim">OWN THE SPIRAL.</span>
+        </h1>
+        <p class="hero-desc">
+          SNAPBALL™ clips to your football and gives you real-time spiral feedback.
+          <strong>Perfect spiral? Stays locked.</strong> Wobbly throw? Detaches instantly.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">Visual Feedback</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">0</span>
+            <span class="stat-label">Batteries Needed</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">∞</span>
+            <span class="stat-label">Reps Outdoors</span>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a href="#product" class="btn btn--primary">Shop Now — $24.99</a>
+          <a href="#how-it-works" class="btn btn--ghost">See It In Action</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-frame">
+          <img src="assets/stream-overlay.svg" alt="" class="stream-bar" aria-hidden="true">
+          <img src="assets/hero-product.png" alt="SNAPBALL perfect spiral vs wobbly throw comparison on football field" class="hero-product-img">
+          <div class="hero-device-float">
+            <img src="assets/snapball-device.svg" alt="Snapball yellow training device" width="80">
+          </div>
+          <div class="hero-label hero-label--good">
+            <span class="check">✓</span> LOCKED
+          </div>
+          <div class="hero-label hero-label--bad">
+            <span class="x">✕</span> DETACHED
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="section how-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// TRAINING MODE</span>
+        <h2>HOW SNAPBALL WORKS</h2>
+        <p>Two outcomes. Zero guesswork. Built for the backyard, the practice field, and QB film sessions.</p>
+      </div>
+      <div class="compare-grid">
+        <article class="compare-card compare-card--good">
+          <div class="compare-visual">
+            <img src="assets/spiral-perfect.svg" alt="Perfect spiral motion" class="compare-spiral">
+            <img src="assets/snapball-device.svg" alt="" class="compare-device" width="64">
+          </div>
+          <div class="compare-status">
+            <span class="status-icon status-icon--good">✓</span>
+            <h3>PERFECT SPIRAL</h3>
+          </div>
+          <p class="compare-title">Attached &amp; Locked</p>
+          <p>Clean rotation keeps SNAPBALL™ seated on the tail of the ball through the entire flight. You threw it right.</p>
+          <span class="compare-footer">STAYS ATTACHED</span>
+        </article>
+        <div class="compare-divider">
+          <span>VS</span>
+        </div>
+        <article class="compare-card compare-card--bad">
+          <div class="compare-visual">
+            <img src="assets/spiral-wobble.svg" alt="Wobbly throw motion" class="compare-spiral">
+            <img src="assets/snapball-device.svg" alt="" class="compare-device compare-device--falling" width="64">
+          </div>
+          <div class="compare-status">
+            <span class="status-icon status-icon--bad">✕</span>
+            <h3>WOBBLY THROW</h3>
+          </div>
+          <p class="compare-title">Detached Instantly</p>
+          <p>Bad spiral mechanics shake the device loose mid-flight. Instant, honest feedback — no coach required.</p>
+          <span class="compare-footer">DETACHES INSTANTLY</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature strip -->
+  <section class="feature-strip">
+    <div class="container feature-strip-inner">
+      <div class="feature-item">
+        <img src="assets/snapball-device.svg" alt="" width="48">
+        <div>
+          <strong>Safety Yellow</strong>
+          <span>High-vis on any field</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🏈</span>
+        <div>
+          <strong>Universal Fit</strong>
+          <span>Standard football tail</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">☀️</span>
+        <div>
+          <strong>All-Weather</strong>
+          <span>Train outdoors, always</span>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">⚡</span>
+        <div>
+          <strong>Instant Read</strong>
+          <span>No apps, no setup</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product -->
+  <section id="product" class="section product-section">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-gallery">
+          <div class="gallery-main">
+            <img src="assets/hero-product.png" alt="SNAPBALL Instant Spiral Feedback product" id="galleryMain">
+          </div>
+          <div class="gallery-thumbs">
+            <button class="thumb active" data-src="assets/hero-product.png">
+              <img src="assets/hero-product.png" alt="Product comparison view">
+            </button>
+            <button class="thumb" data-src="assets/snapball-device.svg">
+              <img src="assets/snapball-device.svg" alt="Snapball device close-up">
+            </button>
+            <button class="thumb thumb--compare" data-compare="good">
+              <img src="assets/spiral-perfect.svg" alt="Perfect spiral">
+              <span>LOCKED</span>
+            </button>
+            <button class="thumb thumb--compare" data-compare="bad">
+              <img src="assets/spiral-wobble.svg" alt="Wobble throw">
+              <span>DETACH</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-info">
+          <span class="product-vendor">SNAPBALL™ OFFICIAL</span>
+          <h1 class="product-title">Instant Spiral Feedback Trainer</h1>
+          <div class="product-rating">
+            <span class="stars">★★★★★</span>
+            <span>4.9 · 127 QB reviews</span>
+          </div>
+          <p class="product-price" id="productPrice">$24.99</p>
+          <p class="product-price-note" id="priceNote">Single unit · Free shipping over $50</p>
+
+          <p class="product-desc">
+            The bright yellow SNAPBALL™ attaches to your football and tells you everything about your spiral — 
+            locked on perfect throws, gone on wobbly ones. Train like you're streaming your own QB breakdown.
+          </p>
+
+          <div class="variant-picker">
+            <span class="picker-label">SELECT PACK</span>
+            <div class="variant-options">
+              <label class="variant-option active" data-variant="single" data-price="24.99">
+                <input type="radio" name="variant" value="single" checked>
+                <span class="variant-name">Single</span>
+                <span class="variant-detail">1× SNAPBALL™</span>
+                <span class="variant-price">$24.99</span>
+              </label>
+              <label class="variant-option variant-option--featured" data-variant="coach" data-price="79.99">
+                <input type="radio" name="variant" value="coach">
+                <span class="variant-badge">BEST VALUE</span>
+                <span class="variant-name">Coaches Pack</span>
+                <span class="variant-detail">4× SNAPBALL™ — Save $20</span>
+                <span class="variant-price">$79.99</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="quantity-row">
+            <span class="picker-label">QUANTITY</span>
+            <div class="quantity-control">
+              <button type="button" id="qtyMinus" aria-label="Decrease quantity">−</button>
+              <input type="number" id="quantity" value="1" min="1" max="10" aria-label="Quantity">
+              <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--full" id="addToCart">
+            Add to Cart — <span id="addPrice">$24.99</span>
+          </button>
+          <button class="btn btn--secondary btn--full" id="buyNow">Buy Now</button>
+
+          <ul class="product-trust">
+            <li>✓ 30-day satisfaction guarantee</li>
+            <li>✓ Ships in 2–4 business days</li>
+            <li>✓ Works on regulation footballs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifestyle / QB section -->
+  <section class="qb-section">
+    <div class="qb-bg">
+      <img src="assets/field-pattern.svg" alt="" aria-hidden="true">
+    </div>
+    <div class="container qb-content">
+      <div class="qb-text">
+        <span class="section-tag">// QB GRIND</span>
+        <h2>BUILT FOR THE FIELD.<br>STYLED FOR THE STREAM.</h2>
+        <p>
+          Whether you're dialing in spirals at sunrise practice or breaking down tape at night — 
+          SNAPBALL™ gives you the same instant read every rep. No sensors. No charging. 
+          Just clip, throw, and know.
+        </p>
+        <ul class="qb-list">
+          <li>Backyard QB sessions</li>
+          <li>7-on-7 &amp; flag football drills</li>
+          <li>High school &amp; college QB rooms</li>
+          <li>Private coaching &amp; camps</li>
+        </ul>
+      </div>
+      <div class="qb-visual">
+        <div class="qb-card">
+          <div class="qb-card-header">
+            <span class="live-dot"></span> TRAINING FEED
+          </div>
+          <img src="assets/hero-product.png" alt="Snapball in action" class="qb-card-img">
+          <div class="qb-card-stats">
+            <div class="qb-stat qb-stat--good">
+              <span>SPIRAL</span>
+              <strong>LOCKED</strong>
+            </div>
+            <div class="qb-stat qb-stat--bad">
+              <span>SPIRAL</span>
+              <strong>LOOSE</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="section reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// COMMUNITY</span>
+        <h2>QB REVIEWS</h2>
+      </div>
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"My guys finally get it without me yelling spiral. Yellow pops on the field — they love it."</p>
+          <footer>
+            <strong>Coach Martinez</strong>
+            <span>Varsity QB Coach · Coaches Pack</span>
+          </footer>
+        </article>
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"Detaches every time I wobble. Brutal but honest. Fixed my release in two weeks of backyard reps."</p>
+          <footer>
+            <strong>Jake R.</strong>
+            <span>HS Quarterback · Single</span>
+          </footer>
+        </article>
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"Bought the 4-pack for our QB room. Best $80 we've spent on training gear this season."</p>
+          <footer>
+            <strong>Sarah K.</strong>
+            <span>Offensive Coordinator · Coaches Pack</span>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// INTEL</span>
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>What size football does SNAPBALL™ fit?</summary>
+          <p>SNAPBALL™ is designed for standard regulation footballs — youth, high school, and official sizes with a standard tail shape.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Will it damage my football?</summary>
+          <p>No. The device clips securely to the tail without puncturing or permanently marking the ball when used as directed.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What's in the Coaches Pack?</summary>
+          <p>Four SNAPBALL™ units in safety yellow — perfect for QB rooms, camps, or stocking your whole receiving corps. Save $20 vs buying four singles.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I use it in rain or cold?</summary>
+          <p>Yes. SNAPBALL™ is built for outdoor training in all weather. The high-vis yellow stays visible in any conditions.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <section class="footer-cta">
+    <div class="container footer-cta-inner">
+      <img src="assets/snapball-device.svg" alt="" width="64" class="footer-cta-device">
+      <h2>READY TO LOCK IN YOUR SPIRAL?</h2>
+      <a href="#product" class="btn btn--primary">Get SNAPBALL™ — From $24.99</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/snapball-logo.svg" alt="Snapball" width="32" height="32">
+        <span>SNAPBALL™</span>
+        <p>Instant Spiral Feedback. Train outdoors. Throw better.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#product">Shop</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <p class="footer-copy">© 2026 SNAPBALL™. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-panel">
+      <header class="cart-header">
+        <h2>Your Cart</h2>
+        <button class="cart-close" id="cartClose" aria-label="Close cart">×</button>
+      </header>
+      <div class="cart-items" id="cartItems">
+        <p class="cart-empty">Your cart is empty. Time to hit the field.</p>
+      </div>
+      <footer class="cart-footer">
+        <div class="cart-subtotal">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">$0.00</strong>
+        </div>
+        <button class="btn btn--primary btn--full" id="checkoutBtn" disabled>Checkout</button>
+        <p class="cart-note">Demo store — checkout is simulated</p>
+      </footer>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" fill="none">
+  <rect width="800" height="120" fill="#0a0a0a" opacity="0.85"/>
+  <rect x="0" y="0" width="4" height="120" fill="#FFD700"/>
+  <circle cx="24" cy="24" r="6" fill="#F44336"/>
+  <text x="40" y="28" font-family="system-ui" font-size="12" font-weight="700" fill="#fff" letter-spacing="1">LIVE TRAINING</text>
+  <text x="40" y="55" font-family="system-ui" font-size="20" font-weight="900" fill="#FFD700">SNAPBALL FEEDBACK</text>
+  <text x="40" y="78" font-family="system-ui" font-size="11" fill="#888" letter-spacing="2">INSTANT SPIRAL READOUT</text>
+  <rect x="600" y="35" width="180" height="50" rx="4" fill="#1a1a1a" stroke="#FFD700" stroke-width="1"/>
+  <text x="690" y="68" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="800" fill="#FFD700">QB MODE</text>
+</svg>

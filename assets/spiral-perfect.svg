@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" fill="none">
+  <defs>
+    <linearGradient id="spiralGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4CAF50"/>
+      <stop offset="100%" stop-color="#1B5E20"/>
+    </linearGradient>
+    <filter id="spiralGlow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <path d="M150 250 C150 250 80 200 60 150 C40 100 70 50 150 50 C230 50 260 100 240 150 C220 200 150 250 150 250" 
+        stroke="url(#spiralGreen)" stroke-width="3" fill="none" opacity="0.6" filter="url(#spiralGlow)"/>
+  <path d="M150 230 C120 200 100 170 95 140 C90 110 110 80 150 75 C190 80 210 110 205 140 C200 170 180 200 150 230" 
+        stroke="#4CAF50" stroke-width="2" fill="none" opacity="0.8"/>
+  <path d="M150 210 C130 190 118 165 115 145 C112 125 125 105 150 100 C175 105 188 125 185 145 C182 165 170 190 150 210" 
+        stroke="#81C784" stroke-width="1.5" fill="none"/>
+  <text x="150" y="280" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="800" fill="#4CAF50" letter-spacing="2">LOCKED IN</text>
+</svg>

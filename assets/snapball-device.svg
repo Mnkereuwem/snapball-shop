@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="finGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF176"/>
+      <stop offset="40%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#C9A000"/>
+    </linearGradient>
+    <radialGradient id="hubGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFEB3B"/>
+      <stop offset="100%" stop-color="#F9A825"/>
+    </radialGradient>
+    <filter id="deviceGlow">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#FFD700" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <g filter="url(#deviceGlow)">
+    <ellipse cx="100" cy="100" rx="22" ry="22" fill="url(#hubGrad)" stroke="#B8860B" stroke-width="2"/>
+    <circle cx="100" cy="100" r="10" fill="#1a1a1a"/>
+    <text x="100" y="105" text-anchor="middle" font-family="Arial Black" font-size="14" font-weight="900" fill="#FFD700">S</text>
+    <path d="M100 78 C85 55 70 45 55 40 C70 50 85 65 92 78 Z" fill="url(#finGrad)" stroke="#C9A000" stroke-width="1"/>
+    <path d="M122 100 C145 85 160 70 168 55 C155 72 140 88 122 92 Z" fill="url(#finGrad)" stroke="#C9A000" stroke-width="1"/>
+    <path d="M100 122 C115 145 130 155 145 160 C130 150 115 135 108 122 Z" fill="url(#finGrad)" stroke="#C9A000" stroke-width="1"/>
+    <path d="M78 100 C55 115 40 130 32 145 C45 128 60 112 78 108 Z" fill="url(#finGrad)" stroke="#C9A000" stroke-width="1"/>
+  </g>
+</svg>
